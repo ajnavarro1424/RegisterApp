@@ -1,0 +1,18 @@
+<h2>Hello <%=@user.username%> </h2>
+<h2>Name: <%=@user.name%> </h2>
+<h2>Address: <%=@user.address%> </h2>
+<h2>City: <%=@user.city%> </h2>
+<h2>State: <%=@user.state%> </h2>
+<h2>Postal Code: <%=@user.postal%> </h2>
+<h2>Country: <%=@user.country%> </h2>
+<h2>Email: <%=@user.email%> </h2>
+<h2>Phone(s): <%if @user.phones.pluck(:number).length == 0%>
+              No Phone Numbers
+              <%end%>
+              <%@user.phones.each do |phone|%>
+              <%=phone.number%>
+              <%end%>
+</h2>
+<h2>Login Status: <%=session[:login]%></h2>
+
+<%=button_to "LogOut", :action => "log_out"%>

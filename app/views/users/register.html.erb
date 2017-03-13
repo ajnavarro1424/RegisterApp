@@ -1,0 +1,28 @@
+<h1>Users#register</h1>
+<p>Find me in app/views/users/register.html.erb</p>
+<%=flash[:alert_logout]%>
+<%=flash[:alert_hacker]%>
+<%=flash[:alert_user]%>
+<form action="/users/submit" method="post">
+  <input type="text" name="name" placeholder="Enter name"><br>
+  <input type="text" name="address" placeholder="Enter address"><br>
+  <input type="text" name="city" placeholder="Enter city"><br>
+  <input type="text" name="state" placeholder="Enter state"><br>
+  <input type="text" name="postal" placeholder="Enter postal"><br>
+  <input type="text" name="country" placeholder="Enter country"><br>
+  <input type="text" name="email" placeholder="Enter email"><br>
+  <input type="text" name="number1" placeholder="Enter phone1"><br>
+  <input type="text" name="number2" placeholder="Enter phone2"><br>
+  <input type="text" name="number3" placeholder="Enter phone3"><br>
+  <input type="text" name="username" placeholder="Enter username" required><br>
+  <input type="password" name="password" placeholder="Enter password" required><br>
+  <input type="submit" name="" value="Submit">
+</form>
+
+<h2>Login here:</h2>
+<%=flash[:alert_invalid]%>
+<form action="/users/login" method="get">
+  <input type="text" name="username_login" placeholder="Enter username" required><br>
+  <input type="password" name="password_login" placeholder="Enter password" required><br>
+  <input type="submit" name="" value="Login">
+</form>
